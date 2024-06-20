@@ -17,7 +17,7 @@ Redmine::I18n.send(:include, AdvancedRoadmap::RedmineI18nPatch)
 Version.send(:include, AdvancedRoadmap::VersionPatch)
 VersionsController.send(:include, AdvancedRoadmap::VersionsControllerPatch)
 
-Redmine::Plugin.register :advanced_roadmap_v2 do
+Redmine::Plugin.register :redmine_advanced_roadmap_v2 do
   name "Advanced roadmap & milestones plugin"
   url "https://github.com/ekylibre/redmine_advanced_roadmap_v2"
   author "Michel LOISELEUR"
