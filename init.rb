@@ -5,10 +5,6 @@ if (Rails.env == "development")
   ActiveSupport::Dependencies.autoload_once_paths.reject!{|x| x =~ /^#{Regexp.escape(File.dirname(__FILE__))}/}
 end
 
-require "redmine"
-require "rubygems"
-require "gravatar"
-
 ApplicationHelper.send(:include, AdvancedRoadmap::ApplicationHelperPatch)
 CalendarsController.send(:include, AdvancedRoadmap::CalendarsControllerPatch)
 Issue.send(:include, AdvancedRoadmap::IssuePatch)
@@ -20,8 +16,6 @@ Redmine::Helpers::Gantt.send(:include, AdvancedRoadmap::RedmineHelpersGanttPatch
 Redmine::I18n.send(:include, AdvancedRoadmap::RedmineI18nPatch)
 Version.send(:include, AdvancedRoadmap::VersionPatch)
 VersionsController.send(:include, AdvancedRoadmap::VersionsControllerPatch)
-
-require_dependency "advanced_roadmap/view_hooks"
 
 Redmine::Plugin.register :advanced_roadmap_v2 do
   name "Advanced roadmap & milestones plugin"
