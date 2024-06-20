@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/base'
 # Experimental!!! See also the Net graph.
 #
 # Submitted by Kevin Clark http://glu.ttono.us/
-class AdvancedRoadmap::Gruff::Spider < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::Spider < RedmineAdvancedRoadmap::Gruff::Base
   
   # Hide all text
   attr_reader :hide_text

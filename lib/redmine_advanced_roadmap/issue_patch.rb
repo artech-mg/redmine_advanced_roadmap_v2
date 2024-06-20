@@ -1,6 +1,6 @@
 require_dependency "issue"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module IssuePatch
     def self.included(base)
       base.class_eval do

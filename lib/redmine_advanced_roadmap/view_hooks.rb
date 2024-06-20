@@ -1,4 +1,4 @@
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   class ViewHooks < Redmine::Hook::ViewListener
 
     render_on(:view_projects_show_sidebar_bottom, :partial => "hooks/milestones")

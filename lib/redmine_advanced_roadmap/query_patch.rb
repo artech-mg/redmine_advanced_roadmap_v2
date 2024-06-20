@@ -1,6 +1,6 @@
 require_dependency "query"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module QueryPatch
     def self.included(base)
       base.class_eval do

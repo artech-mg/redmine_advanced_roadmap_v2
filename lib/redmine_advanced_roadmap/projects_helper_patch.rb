@@ -1,6 +1,6 @@
 require_dependency "projects_helper"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module ProjectsHelperPatch
     def self.included(base)
       base.class_eval do

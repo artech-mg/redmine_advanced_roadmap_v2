@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/base'
 #
 # Doesn't work yet.
 #
-class AdvancedRoadmap::Gruff::PhotoBar < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::PhotoBar < RedmineAdvancedRoadmap::Gruff::Base
 
 # TODO
 #

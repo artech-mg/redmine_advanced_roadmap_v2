@@ -5,7 +5,7 @@ require File.dirname(__FILE__) + '/base'
 # stacked bars. The bottom bar shows the running total and 
 # the top bar shows the new value being added to the array.
 
-class AdvancedRoadmap::Gruff::AccumulatorBar < AdvancedRoadmap::Gruff::StackedBar
+class RedmineAdvancedRoadmap::Gruff::AccumulatorBar < RedmineAdvancedRoadmap::Gruff::StackedBar
 
   def draw
     raise(Gruff::IncorrectNumberOfDatasetsException) unless @data.length == 1

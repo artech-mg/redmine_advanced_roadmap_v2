@@ -1,6 +1,6 @@
 require_dependency "redmine/i18n"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module RedmineI18nPatch
     def self.included(base)
       base.class_eval do

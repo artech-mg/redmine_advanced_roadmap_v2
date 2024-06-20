@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/base'
 # Graph with dots and labels along a vertical access
 # see: 'Creating More Effective Graphs' by Robbins
 
-class AdvancedRoadmap::Gruff::Dot < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::Dot < RedmineAdvancedRoadmap::Gruff::Base
 
   def draw
     @has_left_labels = true

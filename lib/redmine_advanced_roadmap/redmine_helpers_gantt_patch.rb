@@ -1,6 +1,6 @@
 require_dependency "redmine/helpers/gantt"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module RedmineHelpersGanttPatch
     def self.included(base)
       base.class_eval do

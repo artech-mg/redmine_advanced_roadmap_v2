@@ -1,6 +1,6 @@
 require_dependency "version"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module VersionPatch
     def self.included(base)
       base.class_eval do

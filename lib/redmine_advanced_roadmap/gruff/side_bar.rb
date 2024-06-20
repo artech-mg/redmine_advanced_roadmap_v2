@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/base'
 ##
 # Graph with individual horizontal bars instead of vertical bars.
 
-class AdvancedRoadmap::Gruff::SideBar < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::SideBar < RedmineAdvancedRoadmap::Gruff::Base
 
   def draw
     @has_left_labels = true

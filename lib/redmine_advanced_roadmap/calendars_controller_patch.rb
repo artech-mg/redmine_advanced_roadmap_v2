@@ -1,6 +1,6 @@
 require_dependency "calendars_controller"
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module CalendarsControllerPatch
     def self.included(base)
       base.class_eval do

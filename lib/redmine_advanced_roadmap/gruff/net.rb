@@ -2,7 +2,7 @@
 require File.dirname(__FILE__) + '/base'
 
 # Experimental!!! See also the Spider graph.
-class AdvancedRoadmap::Gruff::Net < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::Net < RedmineAdvancedRoadmap::Gruff::Base
 
   # Hide parts of the graph to fit more datapoints, or for a different appearance.
   attr_accessor :hide_dots

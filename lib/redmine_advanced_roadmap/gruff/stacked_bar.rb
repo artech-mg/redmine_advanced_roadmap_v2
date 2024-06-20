@@ -2,7 +2,7 @@
 require File.dirname(__FILE__) + '/base'
 require File.dirname(__FILE__) + '/stacked_mixin'
 
-class AdvancedRoadmap::Gruff::StackedBar < AdvancedRoadmap::Gruff::Base
+class RedmineAdvancedRoadmap::Gruff::StackedBar < RedmineAdvancedRoadmap::Gruff::Base
     include StackedMixin
 
     # Draws a bar graph, but multiple sets are stacked on top of each other.

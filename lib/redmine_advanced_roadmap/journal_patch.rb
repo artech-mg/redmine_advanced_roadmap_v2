@@ -1,4 +1,4 @@
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module JournalPatch
     def self.included(base)
       base.class_eval do

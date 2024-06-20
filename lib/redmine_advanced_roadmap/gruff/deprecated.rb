@@ -3,7 +3,7 @@
 # A mixin for methods that need to be deleted or have been
 # replaced by cleaner code.
 
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module Gruff
     module Deprecated
     

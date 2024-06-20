@@ -15,7 +15,7 @@ require File.dirname(__FILE__) + '/deprecated'
 # Breijs, Richard Cowin, and a cast of thousands.
 #
 # See Gruff::Base#theme= for setting themes.
-module AdvancedRoadmap
+module RedmineAdvancedRoadmap
   module Gruff
   
     # This is the version of Gruff you are using.
