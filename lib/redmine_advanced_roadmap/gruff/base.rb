@@ -15,6 +15,25 @@ require File.dirname(__FILE__) + '/deprecated'
 # Breijs, Richard Cowin, and a cast of thousands.
 #
 # See Gruff::Base#theme= for setting themes.
+module Magick
+
+  class Draw
+
+    # Additional method to scale annotation text since Draw.scale doesn't.
+    def annotate_scaled(img, width, height, x, y, text, scale)
+      scaled_width = (width * scale) >= 1 ? (width * scale) : 1
+      scaled_height = (height * scale) >= 1 ? (height * scale) : 1
+
+      self.annotate( img,
+                     scaled_width, scaled_height,
+                     x * scale, y * scale,
+                     text)
+    end
+
+  end
+
+end # Magick
+
 module RedmineAdvancedRoadmap
   module Gruff
   
@@ -1109,21 +1128,4 @@ module RedmineAdvancedRoadmap
   end # Gruff
 end
 
-module Magick
 
-  class Draw
-
-    # Additional method to scale annotation text since Draw.scale doesn't.
-    def annotate_scaled(img, width, height, x, y, text, scale)
-      scaled_width = (width * scale) >= 1 ? (width * scale) : 1
-      scaled_height = (height * scale) >= 1 ? (height * scale) : 1
-
-      self.annotate( img,
-                     scaled_width, scaled_height,
-                     x * scale, y * scale,
-                     text)
-    end
-
-  end
-
-end # Magick
