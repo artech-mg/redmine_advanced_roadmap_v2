@@ -9,7 +9,7 @@ module RedmineAdvancedRoadmap
 
         def add_milestones
           yield
-          view = ActionView::Base.new(File.join(File.dirname(__FILE__), "..", "..", "app", "views"))
+          view = ActionView::Base.with_empty_template_cache.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, nil)
           view.class_eval do
             include ApplicationHelper
           end
