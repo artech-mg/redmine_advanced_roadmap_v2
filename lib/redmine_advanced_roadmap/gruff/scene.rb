@@ -106,7 +106,7 @@ private
 end
 
 
-class Gruff::Group
+class RedmineAdvancedRoadmap::Gruff::Group
 
   include Observable
   attr_reader :name
@@ -126,7 +126,7 @@ class Gruff::Group
 end
 
 
-class Gruff::Layer
+class RedmineAdvancedRoadmap::Gruff::Layer
   
   attr_reader :name
   
