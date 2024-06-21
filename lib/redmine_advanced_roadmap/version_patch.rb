@@ -83,7 +83,7 @@ module RedmineAdvancedRoadmap
                 end
               end
             end
-            if solved_issues < Setting.plugin_advanced_roadmap_v2["solved_issues_to_estimate"].to_i or total_solved_estimated == 0.0
+            if solved_issues < Setting.plugin_redmine_advanced_roadmap_v2["solved_issues_to_estimate"].to_i or total_solved_estimated == 0.0
               @progress_factor = nil
             else
               @progress_factor = total_solved_spent / total_solved_estimated
