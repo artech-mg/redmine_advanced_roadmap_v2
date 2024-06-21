@@ -23,7 +23,7 @@ Redmine::Plugin.register :redmine_advanced_roadmap_v2 do
   author "Michel LOISELEUR"
   author_url "https://github.com/Coren"
   description "This is a plugin for Redmine that is used to show more information inside the Roadmap page and implements the milestones featuring."
-  version "2.4.3"
+  version "2.5.0"
   permission :manage_milestones, {:milestones => [:new, :create, :edit, :update, :destroy]}
   requires_redmine :version_or_higher => "2.1.2"
 
