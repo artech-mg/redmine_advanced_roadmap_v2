@@ -37,7 +37,7 @@ class MilestonesController < ApplicationController
   end
 
   def create
-    @milestone = @project.milestones.build(params[:milestone])
+    @milestone = @project.milestones.build(milestone_params)
     @milestone.user_id = User.current.id
     if request.post? and @milestone.save
       if params[:versions]
@@ -75,7 +75,7 @@ class MilestonesController < ApplicationController
         end
       end
     end
-    if @milestone.update_attributes(params[:milestone])
+    if @milestone.update_attributes(milestone_params)
       versions_to_delete.each do |version|
         milestone_version = MilestoneVersion.where("milestone_id = #{@milestone.id} AND version_id = #{version.id}").first
         milestone_version.destroy
@@ -147,6 +147,10 @@ private
     else
       @selected_tracker_ids = (default_trackers || selectable_trackers).collect {|t| t.id.to_s }
     end
+  end
+
+  def milestone_params
+    params.require(:milestone).permit(:name, :description, :effective_date)
   end
 
 end
