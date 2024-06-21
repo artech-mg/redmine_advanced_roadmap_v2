@@ -9,7 +9,8 @@ module RedmineAdvancedRoadmap
 
         def add_milestones
           yield
-          view = ActionView::Base.with_empty_template_cache.new(ActionView::LookupContext.new(ActionController::Base.view_paths), {}, nil)
+          lookup_context = ActionView::LookupContext.new(ActionController::Base.view_paths)
+          view = ActionView::Base.with_empty_template_cache.new(lookup_context, {}, nil)
           view.class_eval do
             include ApplicationHelper
           end
@@ -23,8 +24,8 @@ module RedmineAdvancedRoadmap
                                            :id => milestone.id, :only_path => true),
                            :day => milestone.effective_date.day}
           end
-          response.body += view.render(:partial => "hooks/calendars/milestones",
-                                       :locals => {:milestones => milestones})
+          renderer = ActionView::Renderer.new(lookup_context)
+          response.body += renderer.render(view, { file: Rails.root.join('plugins', 'redmine_advanced_roadmap_v2', 'app', 'views', 'hooks', 'calendars', '_milestones.html.erb'), :locals => {:milestones => milestones} })
         end
 
       end
