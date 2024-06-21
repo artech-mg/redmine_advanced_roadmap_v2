@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/base'
 require File.dirname(__FILE__) + '/stacked_mixin'
 
 class RedmineAdvancedRoadmap::Gruff::StackedArea < RedmineAdvancedRoadmap::Gruff::Base
-  include StackedMixin
+  include RedmineAdvancedRoadmap::Gruff::StackedMixin
   attr_accessor :last_series_goes_on_bottom
   
   def draw

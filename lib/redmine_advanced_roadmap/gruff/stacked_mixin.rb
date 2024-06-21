@@ -1,5 +1,5 @@
 
-module RedmineAdvancedRoadmap::Gruff::Base::StackedMixin
+module RedmineAdvancedRoadmap::Gruff::StackedMixin
   # Used by StackedBar and child classes.
   #
   # tsal: moved from Base 03 FEB 2007

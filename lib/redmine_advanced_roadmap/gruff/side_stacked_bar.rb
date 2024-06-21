@@ -9,7 +9,7 @@ require File.dirname(__FILE__) + '/stacked_mixin'
 # alun.eyre@googlemail.com 
 
 class RedmineAdvancedRoadmap::Gruff::SideStackedBar < RedmineAdvancedRoadmap::Gruff::SideBar
-  include StackedMixin
+  include RedmineAdvancedRoadmap::Gruff::StackedMixin
 
   def draw
     @has_left_labels = true
