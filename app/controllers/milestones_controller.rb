@@ -75,7 +75,7 @@ class MilestonesController < ApplicationController
         end
       end
     end
-    if @milestone.update_attributes(milestone_params)
+    if @milestone.update(milestone_params)
       versions_to_delete.each do |version|
         milestone_version = MilestoneVersion.where("milestone_id = #{@milestone.id} AND version_id = #{version.id}").first
         milestone_version.destroy
