@@ -240,7 +240,7 @@ module RedmineAdvancedRoadmap
         @scale = @columns / @raw_columns
   
         vera_font_path = File.expand_path('Vera.ttf', ENV['MAGICK_FONT_PATH'])
-        @font = File.exists?(vera_font_path) ? vera_font_path : Redmine::Configuration['rmagick_font_path']
+        @font = File.exist?(vera_font_path) ? vera_font_path : Redmine::Configuration['rmagick_font_path']
   
         @marker_font_size = 21.0
         @legend_font_size = 20.0
